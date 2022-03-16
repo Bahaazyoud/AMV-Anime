@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime</title>
+    <link rel="stylesheet" href="anime.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo </a>
+        <div class="rightside">
+            <div class="btns daynight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menutoggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+
+        <video autoplay loop muted preload="auto" poster="poster.png">
+   <source src="anime.mp4" type="video/mp4">
+   <source src="anime.mp4" type="video/webm">
+ </video>
+        <img src="image/mask.jpg" alt="" class="mask">
+        <h3 style="z-index: 1000;font-size: 100px;color: white;display: none;animation: mask 3s linear infinite;">Anime</h3>
+
+    </section>
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let daynight = document.querySelector('.daynight')
+        let menutoggle = document.querySelector('.menutoggle')
+        let body = document.querySelector('body')
+        let nav = document.querySelector('.nav')
+        daynight.onclick = function() {
+            body.classList.toggle('dark')
+            daynight.classList.toggle('active')
+        }
+        menutoggle.onclick = function() {
+            menutoggle.classList.toggle('active')
+            nav.classList.toggle('active')
+        }
+        audioElement.play();
+    </script>
+</body>
+
+</html>
